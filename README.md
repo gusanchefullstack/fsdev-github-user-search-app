@@ -57,7 +57,7 @@ Behavior from the spec:
 ### Links
 
 - Solution URL: _coming soon (after the Frontend Mentor submission)_
-- Live Site URL: _coming soon (after the Vercel deploy)_
+- Live Site URL: [fsdev-github-user-search-app.vercel.app](https://fsdev-github-user-search-app.vercel.app)
 - Repository: [gusanchefullstack/fsdev-github-user-search-app](https://github.com/gusanchefullstack/fsdev-github-user-search-app)
 
 ## Getting started
