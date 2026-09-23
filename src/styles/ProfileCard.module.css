@@ -1,0 +1,110 @@
+/*
+  Mobile (frame 5:849): 70px avatar beside the name block; bio, stats, and links full width below.
+  Tablet/desktop (frames 5:696, 1:856): 117px avatar in its own column beside everything.
+*/
+.card {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  grid-template-areas:
+    'avatar header'
+    'details details';
+  column-gap: var(--space-250);
+  row-gap: var(--space-300);
+  padding: var(--space-400) var(--space-300);
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-surface);
+}
+
+.avatar {
+  grid-area: avatar;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-050);
+  min-width: 0;
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-025);
+  min-width: 0;
+}
+
+.name {
+  color: var(--color-heading);
+  font-size: var(--preset-1-size);
+  font-weight: var(--font-bold);
+  line-height: var(--preset-1-line);
+  overflow-wrap: anywhere;
+}
+
+.handle {
+  color: var(--color-handle);
+  font-size: var(--preset-4-size);
+  line-height: var(--preset-4-line);
+  overflow-wrap: anywhere;
+}
+
+.joined {
+  color: var(--color-text);
+  font-size: var(--preset-6-size);
+  line-height: var(--preset-6-line);
+  white-space: nowrap;
+}
+
+.details {
+  grid-area: details;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+  min-width: 0;
+}
+
+.bio {
+  color: var(--color-text);
+  font-size: var(--preset-6-size);
+  line-height: var(--preset-6-line);
+  overflow-wrap: anywhere;
+}
+
+.noBio {
+  opacity: var(--opacity-no-bio);
+}
+
+@media (min-width: 768px) {
+  .card {
+    grid-template-columns: 117px minmax(0, 1fr);
+    grid-template-areas:
+      'avatar header'
+      'avatar details';
+    grid-template-rows: auto 1fr;
+    column-gap: var(--space-400);
+    padding: var(--space-600) var(--space-400);
+  }
+
+  .avatar {
+    width: 117px;
+    height: 117px;
+  }
+
+  .header {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-200);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    padding: var(--space-600);
+  }
+}

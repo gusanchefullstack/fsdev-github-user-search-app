@@ -1,0 +1,42 @@
+/* Stacked on mobile (frame 5:859), in a row from tablet up (frame 1:864) */
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-200);
+  padding: var(--space-200) var(--space-250);
+  border-radius: var(--radius-10);
+  background-color: var(--color-inset);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-050);
+  min-width: 0;
+}
+
+.label {
+  color: var(--color-text);
+  font-size: var(--preset-7-size);
+  line-height: var(--preset-7-line);
+}
+
+.value {
+  color: var(--color-heading);
+  font-size: var(--preset-2-size);
+  font-weight: var(--font-bold);
+  line-height: var(--preset-2-line);
+}
+
+@media (min-width: 768px) {
+  .stats {
+    flex-direction: row;
+    align-items: center;
+    min-height: 85px;
+    padding: var(--space-200) var(--space-400);
+  }
+
+  .stat {
+    flex: 1 1 0;
+  }
+}

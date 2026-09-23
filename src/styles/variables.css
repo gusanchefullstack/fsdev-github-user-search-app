@@ -1,0 +1,107 @@
+/*
+  Design tokens from the Figma Design System (node 1:69).
+  Change fonts, colors, and typography here only.
+
+  Breakpoints (custom properties can't be used in media queries, so they are listed here):
+    tablet  -> @media (min-width: 768px)
+    desktop -> @media (min-width: 1024px)
+*/
+
+:root {
+  /* Raw palette */
+  --neutral-0: #ffffff;
+  --neutral-100: #f6f8ff;
+  --neutral-200: #90a4d4;
+  --neutral-300: #697c9a;
+  --neutral-500: #4b6a9b;
+  --neutral-700: #2b3442;
+  --neutral-800: #1e2a47;
+  --neutral-900: #141d2f;
+  --blue-300: #60abff;
+  --blue-500: #0079ff;
+  --red-500: #f74646;
+
+  /* Typography */
+  --font-family: 'Space Mono', monospace;
+  --font-regular: 400;
+  --font-bold: 700;
+
+  /* Text presets: size / line-height (weight is set where used) */
+  --preset-1-size: 26px; /* bold: logo, user name */
+  --preset-1-line: 1.2;
+  --preset-2-size: 22px; /* bold: stat numbers, message title */
+  --preset-2-line: 1.4;
+  --preset-3-size: 13px; /* regular: search input (mobile) */
+  --preset-3-line: 1.4;
+  --preset-4-size: 16px; /* regular: @handle */
+  --preset-4-line: 1.5;
+  --preset-5-size: 16px; /* bold: search button, inline message */
+  --preset-5-line: 1.5;
+  --preset-6-size: 15px; /* regular: body text, links, joined date */
+  --preset-6-line: 1.5;
+  --preset-7-size: 13px; /* regular: stat labels */
+  --preset-7-line: 1.5;
+  --preset-8-size: 13px; /* bold: theme toggle label */
+  --preset-8-line: 1.4;
+  --preset-8-spacing: 2.5px;
+
+  /* Spacing and radii */
+  --space-025: 2px;
+  --space-050: 4px;
+  --space-100: 8px;
+  --space-150: 12px;
+  --space-200: 16px;
+  --space-250: 20px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-500: 40px;
+  --space-600: 48px;
+  --radius-10: 10px;
+  --radius-card: 15px;
+  --radius-16: 16px;
+
+  /* Semantic colors: light theme (frame 1:705) */
+  --color-page: var(--neutral-100);
+  --color-surface: var(--neutral-0);
+  --color-inset: var(--neutral-100);
+  --color-logo: var(--neutral-900);
+  --color-heading: var(--neutral-700);
+  --color-text: var(--neutral-500);
+  --color-muted: var(--neutral-300);
+  --color-icon: var(--neutral-700);
+  --color-input-text: var(--neutral-700);
+  --color-placeholder: var(--neutral-500);
+  --color-accent: var(--blue-500);
+  --color-accent-hover: var(--blue-300);
+  --color-handle: var(--blue-500);
+  --color-toggle: var(--neutral-500);
+  --color-toggle-hover: var(--neutral-900);
+  --color-toggle-icon: var(--neutral-500);
+  --color-error: var(--red-500);
+  --color-button-text: var(--neutral-0);
+  --color-focus: var(--blue-500);
+  --shadow-surface: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
+  --opacity-unavailable: 0.7;
+  --opacity-no-bio: 0.75;
+}
+
+/* Semantic colors: dark theme (frame 5:244) */
+:root[data-theme='dark'] {
+  --color-page: var(--neutral-900);
+  --color-surface: var(--neutral-800);
+  --color-inset: var(--neutral-900);
+  --color-logo: var(--neutral-0);
+  --color-heading: var(--neutral-0);
+  --color-text: var(--neutral-0);
+  --color-muted: var(--neutral-200);
+  --color-icon: var(--neutral-0);
+  --color-input-text: var(--neutral-0);
+  --color-placeholder: rgba(255, 255, 255, 0.7);
+  --color-handle: var(--blue-300);
+  --color-toggle: var(--neutral-200);
+  --color-toggle-hover: var(--neutral-0);
+  --color-toggle-icon: var(--neutral-0);
+  --color-focus: var(--blue-300);
+  --shadow-surface: none;
+  --opacity-no-bio: 0.7;
+}

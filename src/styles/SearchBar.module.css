@@ -1,0 +1,101 @@
+/* Search bar: 69px tall pill (frames 5:937 mobile, 5:551 desktop, 5:1534 error) */
+.form {
+  display: flex;
+  align-items: center;
+  gap: var(--space-100);
+  min-height: 69px;
+  padding: var(--space-100) var(--space-150);
+  border-radius: var(--radius-16);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-surface);
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-accent);
+  mask: url('../assets/icon-search.svg') center / contain no-repeat;
+}
+
+.input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-input-text);
+  font-size: var(--preset-3-size);
+  line-height: var(--preset-3-line);
+  caret-color: var(--color-accent);
+}
+
+.input::placeholder {
+  color: var(--color-placeholder);
+  opacity: 1;
+}
+
+.input:focus-visible {
+  outline: none;
+}
+
+/* Inline error label ("No results"); empty paragraphs take no space */
+.message {
+  flex-shrink: 0;
+  color: var(--color-error);
+  font-size: var(--preset-3-size);
+  font-weight: var(--font-bold);
+  line-height: var(--preset-5-line);
+  white-space: nowrap;
+}
+
+.message:empty {
+  display: none;
+}
+
+.button {
+  flex-shrink: 0;
+  padding: var(--space-150) var(--space-250);
+  border: none;
+  border-radius: var(--radius-10);
+  background-color: var(--color-accent);
+  color: var(--color-button-text);
+  font-size: var(--preset-5-size);
+  font-weight: var(--font-bold);
+  line-height: var(--preset-5-line);
+  cursor: pointer;
+}
+
+/* Hover and focus states (frames 5:1235, 5:1338) */
+.button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+/* The input has no outline of its own; the whole bar is outlined while typing */
+.form:has(.input:focus-visible) {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .form {
+    gap: var(--space-250);
+    padding: var(--space-100) var(--space-150) var(--space-100) var(--space-300);
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .input {
+    font-size: 18px;
+  }
+
+  .message {
+    font-size: var(--preset-5-size);
+  }
+
+  .button {
+    padding: var(--space-150) var(--space-300);
+  }
+}

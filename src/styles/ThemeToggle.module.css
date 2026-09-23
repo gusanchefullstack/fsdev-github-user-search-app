@@ -1,0 +1,50 @@
+/* Theme toggle (header of frames 1:705 / 5:244; hover in 5:1235 / 5:1632) */
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-150);
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: 4px;
+  color: var(--color-toggle);
+  cursor: pointer;
+}
+
+.label {
+  font-size: var(--preset-8-size);
+  font-weight: var(--font-bold);
+  line-height: var(--preset-8-line);
+  letter-spacing: var(--preset-8-spacing);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-toggle-icon);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+.moon {
+  mask-image: url('../assets/icon-moon.svg');
+}
+
+.sun {
+  mask-image: url('../assets/icon-sun.svg');
+}
+
+.toggle:hover {
+  color: var(--color-toggle-hover);
+}
+
+.toggle:hover .icon {
+  background-color: var(--color-toggle-hover);
+}
+
+@media (min-width: 768px) {
+  .toggle {
+    gap: var(--space-200);
+  }
+}

@@ -1,0 +1,33 @@
+/* Fluid container: 343px at 375, 704px at 768, 730px max on desktop (frames 5:841, 5:688, 1:705) */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-400);
+  width: 100%;
+  padding: var(--space-400) var(--space-200);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-400);
+}
+
+@media (min-width: 768px) {
+  .page,
+  .main {
+    gap: var(--space-500);
+  }
+
+  .page {
+    padding: var(--space-500) var(--space-400);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    max-width: calc(730px + 2 * var(--space-400));
+    margin-inline: auto;
+    padding-top: 130px;
+  }
+}

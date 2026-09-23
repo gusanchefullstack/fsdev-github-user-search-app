@@ -1,0 +1,30 @@
+/* Error card (frames 5:1522 light, 6:622 dark) */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-200);
+  padding: var(--space-400) var(--space-300);
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-surface);
+  text-align: center;
+}
+
+.title {
+  color: var(--color-heading);
+  font-size: var(--preset-2-size);
+  font-weight: var(--font-bold);
+  line-height: var(--preset-2-line);
+}
+
+.body {
+  color: var(--color-muted);
+  font-size: var(--preset-6-size);
+  line-height: var(--preset-6-line);
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: var(--space-600);
+  }
+}

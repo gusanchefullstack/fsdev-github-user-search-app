@@ -1,0 +1,71 @@
+/* One column on mobile (frame 5:869), 2x2 grid from tablet up (frame 1:869) */
+.links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-200);
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-200);
+  min-width: 0;
+  color: var(--color-text);
+  font-size: var(--preset-6-size);
+  line-height: var(--preset-6-line);
+}
+
+.text,
+.link {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Missing value: text and icon dimmed together */
+.unavailable {
+  opacity: var(--opacity-unavailable);
+}
+
+/* Icons are the provided SVGs used as masks, so they take the theme's icon color */
+.icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-icon);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+.location {
+  mask-image: url('../assets/icon-location.svg');
+}
+
+.twitter {
+  mask-image: url('../assets/icon-twitter.svg');
+}
+
+.website {
+  mask-image: url('../assets/icon-website.svg');
+}
+
+.company {
+  mask-image: url('../assets/icon-company.svg');
+}
+
+@media (min-width: 768px) {
+  .links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
