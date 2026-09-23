@@ -56,7 +56,7 @@ Behavior from the spec:
 
 ### Links
 
-- Solution URL: _coming soon (after the Frontend Mentor submission)_
+- Solution URL: [Frontend Mentor solution](https://www.frontendmentor.io/solutions/github-user-search-app-using-react-typescript-vite-and-spec-driven-dev-BMOBvJB-Jn)
 - Live Site URL: [fsdev-github-user-search-app.vercel.app](https://fsdev-github-user-search-app.vercel.app)
 - Repository: [gusanchefullstack/fsdev-github-user-search-app](https://github.com/gusanchefullstack/fsdev-github-user-search-app)
 
