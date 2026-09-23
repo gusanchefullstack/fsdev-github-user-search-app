@@ -261,7 +261,7 @@ figma-design-to-code guidance first) and use its exact spacing, sizes, and color
 - [X] T040 Run `npm run lint`, `npm test`, and `npm run build`, and fix every error and type issue in `src/`
 - [X] T041 [P] Add short plain-style comments to key code elements (`src/lib/githubApi.ts`, `src/lib/toUserProfile.ts`, the state logic in `src/App.tsx`, and the theme tokens in `src/styles/variables.css`), per the `specs.md` Documentation section
 - [X] T042 Run every automated and manual scenario in `specs/001-github-user-search/quickstart.md` (1–9, including offline and Lighthouse/axe), and fix any failure before marking the feature done. Also check the timing criteria: with DevTools throttling off (or "Fast 4G") and the cache disabled, the octocat card is fully visible in under 2s (SC-001, from the Performance panel or Lighthouse), and a search from typing to result takes under 5s (SC-002)
-  - **Note (2026-09-23)**: Lighthouse accessibility scored 95–96. The only failures are color-contrast items that use the exact Figma colors, so they were left unchanged (constitution I) pending the user's decision:
+  - **Note (2026-09-23)**: Lighthouse accessibility scored 95–96. The only failures are color-contrast items that use the exact Figma colors, so they were left unchanged (constitution I). The user accepted keeping the design colors on 2026-09-23:
     - Light theme: Search button (white on `#0079ff`, 4.05:1); `@handle` (`#0079ff`, 4.05:1); dimmed "This profile has no bio" (3.28:1); dimmed "Not Available" (2.97:1); inline "No results" (`#f74646`, 3.54:1); error-card body (`#697c9a`, 4.24:1).
     - Dark theme: only the Search button.
 
